@@ -1,0 +1,128 @@
+.contentContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.content {
+    width: 1276px;
+    height: 100%;
+}
+
+.banner {
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.contentBannerLeft {
+    height: 336px;
+}
+
+.contentBannerRight {
+    /* width: 30%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bannerItem {
+    height: 170px;
+}
+
+.listProduct {
+    padding-top: 18px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.productContainer {
+    position: relative;
+    width: 243px;
+    height: 450px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+/* .productInstallment {
+    color: #fe0000;
+    border: 1px solid red;
+    width: 68px;
+    font-size: 12px;
+    border-radius: 8px;
+    background-color: #fff0f1;
+    position: absolute;
+    right: 0;
+} */
+
+.productPrecent {
+    background-color: #fe0000;
+    border-radius: 8px;
+    margin-left: 10px;
+    color: #ffffff;
+    padding: 0px 2px;
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 2px;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+.imageProduct {
+    height: 190px;
+}
+
+.productInfo {
+    margin-top: 20px;
+}
+.productTitle {
+    color: #3f3f3f;
+    font-size: 1em;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.productTitle:hover {
+    color: #ed3324;
+    cursor: pointer;
+}
+
+.productPrice {
+    position: relative;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #ed3324;
+    margin-left: 0;
+    text-decoration: line-through #454343;
+}
+
+.productDiscount {
+    color: #8f8f8f;
+}
+
+.productChip {
+    font-size: 16px;
+    color: #8f8f8f;
+    font-weight: 500;
+}
+
+.productSizeScreen {
+    color: #141111;
+    font-weight: 500;
+}
+
+.productRam {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.productRom {
+    font-size: 16px;
+    font-weight: 500;
+}
