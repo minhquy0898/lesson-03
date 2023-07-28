@@ -1,0 +1,104 @@
+.modalCart {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartClose {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cartContainer {
+    background-color: #ffffff;
+    width: 700px;
+    height: 500px;
+    padding: 8px 12px 6px 16px;
+}
+
+.cartContent {
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(196, 189, 189);
+}
+
+.cartMain {
+    display: flex;
+    justify-content: space-between;
+}
+.cartContent img {
+    width: 70px;
+    height: 70px;
+}
+
+.cartTitle {
+    color: #8f8f8f;
+    font-size: 16px;
+}
+
+.cartSale {
+    color: red;
+}
+
+.cartPrice {
+    color: #8f8f8f;
+    font-size: 16px;
+}
+
+.cartDiscount {
+    color: red;
+}
+
+.cartMinus {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: #8f8f8f;
+}
+
+.cartPlus {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: #8f8f8f;
+}
+
+.cartTotal {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f6f9;
+}
+
+.totalInfo {
+    padding-left: 20px;
+    padding: 10px;
+}
+.totalSale,
+.totalSaleMoney {
+    color: red;
+}
+
+.totalMoneyProduct {
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalTitle {
+    /* display: flex; */
+    justify-content: flex-start;
+    font-weight: 500;
+    /* margin-top: 20px; */
+}
+
+.TotalMoney {
+    /* display: flex; */
+    justify-content: flex-end;
+    color: red;
+}

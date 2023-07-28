@@ -1,19 +1,37 @@
 import React from 'react'
 
 const Product = (props) => {
-    const { img, name, price, discount, chip, sizeScreen, ram, rom } = props
+    const { img, name, price, discount, chip, sizeScreen, ram, rom, setDataDetail, setIsShowModal } = props
 
+
+    const handleClickDetail = (e) => {
+
+        setDataDetail({
+            img,
+            name,
+            price,
+            discount,
+            chip,
+            sizeScreen,
+            ram,
+            rom
+        })
+        setIsShowModal(true)
+
+    }
 
     const discountPrice = (num) => {
         let arr = num.split('')
-        console.log(arr)
+
         arr.pop()
         let total = parseInt(arr.join(''))
         return Math.floor((total * (100 - parseInt(discount))) / 100)
     }
 
+
+
     return (
-        <div className='productContainer'>
+        <div className='productContainer'  >
 
             <img src={img} alt={img} className='imageProduct' />
             <div className='productInfo'>
@@ -27,7 +45,7 @@ const Product = (props) => {
                 <h2 className='productSizeScreen'>Kích thước màn hình : {sizeScreen}</h2>
                 <p className='productRam'> RAM {ram}</p>
                 <p className='productRom'>Bộ nhớ trong {rom}</p>
-                <button className='btn-detail'></button>
+                <button className='btn-detail' onClick={(e) => handleClickDetail(e)} >Show detail</button>
             </div>
         </div>
     )

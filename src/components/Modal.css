@@ -1,0 +1,89 @@
+.modalBackground {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    display: flex;
+    background-color: #ffffff;
+    width: 33.33333%;
+    height: 500px;
+    width: 700px;
+}
+
+.modalContent img {
+    width: 200px;
+    height: 500px;
+    object-fit: contain;
+}
+
+.detailContent {
+    margin-top: 140px;
+    margin-left: 100px;
+}
+.contentTitle {
+    font-weight: 500;
+    font-size: 1.4rem;
+    padding-bottom: 10px;
+}
+
+.contentDiscount {
+    font-weight: 500;
+}
+
+.contentPercent {
+    width: 20px;
+    background-color: red;
+    margin-right: 16px;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 2px 2px;
+    font-weight: 500;
+}
+
+.saleGroup {
+    padding-bottom: 6px;
+}
+
+.contentPrice {
+    color: #8f8f8f;
+    font-size: 14px;
+}
+
+.contentInstallment {
+    border: 2px solid red;
+    border-radius: 4px;
+    color: red;
+    font-size: 12px;
+    padding: 2px 2px;
+    padding-left: 4px;
+    margin-right: 8px;
+}
+
+.contentInfo {
+    margin-bottom: 30px;
+}
+
+.contentNew {
+    background-color: green;
+    color: #ffffff;
+    padding: 2px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.btnAddProduct {
+    border: 2px solid red;
+    padding: 16px;
+    color: red;
+    font-weight: 500;
+}

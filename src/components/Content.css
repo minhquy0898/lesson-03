@@ -43,7 +43,7 @@
 .productContainer {
     position: relative;
     width: 243px;
-    height: 450px;
+    height: 466px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
@@ -125,4 +125,16 @@
 .productRom {
     font-size: 16px;
     font-weight: 500;
+}
+
+/* =========== Show Detail========== */
+.btn-detail {
+    padding: 4px 6px;
+    background-color: rgb(48, 216, 48);
+    margin-top: 6px;
+    border-radius: 8px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
 }

@@ -18,7 +18,6 @@ const formatPrice = (total) => {
         else {
             newArr.push(arr[i])
         }
-
     }
     let kq = newArr.join('')
     return kq

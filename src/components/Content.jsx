@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Content.css'
 import Product from './Product';
+import Modal from './Modal';
+import ModalList from './ModalList';
 const data = [
     {
         img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/product/829/dien-thoai-iphone-14-pro-max-128gb-tim-1.jpg",
@@ -53,29 +55,42 @@ const data = [
         rom: "16"
     }
 ]
-const Content = () => {
-    return (
-        <div className='contentContainer'>
-            <div className='content'>
-                <div className='banner'>
-                    <div className='contentBannerLeft'>
-                        <img src="https://cdn.nguyenkimmall.com/images/companies/_1/MKT_ECM/0423/Dealsheet/AQUA/t%E1%BB%A7%20l%E1%BA%A1nh%20897x350.jpg" alt="" />
-                    </div>
-                    <div className='contentBannerRight'>
-                        <img src="https://cdn.nguyenkimmall.com/images/companies/_1/MKT_ECM/0723/PANASONIC/Onsite/new/Right%20banner%20in%20cate.png" alt="" className='bannerItem' />
-                        <img src="https://cdn.nguyenkimmall.com/images/companies/_1/MKT_ECM/0723/TLV%20LG/Onsite/Small_Homepage-Banner_309x183px.jpg" alt="" className='bannerItem' />
-                    </div>
-                </div>
 
-                <div className='listProduct'>
-                    {data && data.map((item, index) => {
-                        return (
-                            <Product key={index} img={item.img} name={item.name} price={item.price} discount={item.discount} chip={item.chip} sizeScreen={item.sizeScreen} ram={item.ram} rom={item.rom} />
-                        )
-                    })}
+const Content = () => {
+    const [isShowModal, setIsShowModal] = useState(false)
+    const [dataDetail, setDataDetail] = useState({})
+    const [listProduct, setListProduct] = useState([])
+    const [isShowModalList, setIsShowModalList] = useState(false)
+    let handleClickProduct = () => {
+        setIsShowModal(!isShowModal)
+    }
+    console.log(listProduct);
+    return (
+        <>
+            <div className='contentContainer'>
+                <div className='content'>
+                    <div className='banner'>
+                        <div className='contentBannerLeft'>
+                            <img src="https://cdn.nguyenkimmall.com/images/companies/_1/MKT_ECM/0423/Dealsheet/AQUA/t%E1%BB%A7%20l%E1%BA%A1nh%20897x350.jpg" alt="" />
+                        </div>
+                        <div className='contentBannerRight'>
+                            <img src="https://cdn.nguyenkimmall.com/images/companies/_1/MKT_ECM/0723/PANASONIC/Onsite/new/Right%20banner%20in%20cate.png" alt="" className='bannerItem' />
+                            <img src="https://cdn.nguyenkimmall.com/images/companies/_1/MKT_ECM/0723/TLV%20LG/Onsite/Small_Homepage-Banner_309x183px.jpg" alt="" className='bannerItem' />
+                        </div>
+                    </div>
+
+                    <div className='listProduct'>
+                        {data && data.map((item, index) => {
+                            return (
+                                <Product setDataDetail={setDataDetail} setIsShowModal={setIsShowModal} key={index} img={item.img} name={item.name} price={item.price} discount={item.discount} chip={item.chip} sizeScreen={item.sizeScreen} ram={item.ram} rom={item.rom} />
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
-        </div>
+            {isShowModal && <Modal setIsShowModalList={setIsShowModalList} listProduct={listProduct} setListProduct={setListProduct} setIsShowModal={setIsShowModal} data={dataDetail} />}
+            {isShowModalList && <ModalList setIsShowModalList={setIsShowModalList} listProduct={listProduct} />}
+        </>
     )
 }
 
