@@ -1,0 +1,81 @@
+.productForMe {
+    position: relative;
+    width: 243px;
+    height: 466px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.productForMePrecent {
+    background-color: #fe0000;
+    border-radius: 8px;
+    margin-left: 10px;
+    color: #ffffff;
+    padding: 0px 2px;
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 2px;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+.imageProductForMe {
+    height: 190px;
+}
+
+.producForMetInfo {
+    margin-top: 20px;
+}
+.productForMeTitle {
+    color: #3f3f3f;
+    font-size: 1em;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.productForMeTitle:hover {
+    color: #ed3324;
+    cursor: pointer;
+}
+
+.productForMePrice {
+    position: relative;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #ed3324;
+    margin-left: 0;
+    text-decoration: line-through #454343;
+}
+
+.productForMeDiscount {
+    color: #8f8f8f;
+}
+
+.productForMeChip {
+    font-size: 16px;
+    color: #8f8f8f;
+    font-weight: 500;
+}
+
+.productFormeSizeScreen {
+    color: #141111;
+    font-weight: 500;
+}
+
+.productForMeRam {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.productForMeRom {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.listProductForMe {
+    padding-top: 18px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}

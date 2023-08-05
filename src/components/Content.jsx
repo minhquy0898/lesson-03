@@ -3,6 +3,9 @@ import './Content.css'
 import Product from './Product';
 import Modal from './Modal';
 import ModalList from './ModalList';
+import AllProduct from './AllProduct';
+import { BsFillFilterCircleFill } from 'react-icons/bs';
+import ProductForMe from './ProductForMe';
 const data = [
     {
         img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/product/829/dien-thoai-iphone-14-pro-max-128gb-tim-1.jpg",
@@ -53,7 +56,8 @@ const data = [
         sizeScreen: "6",
         ram: "4",
         rom: "16"
-    }
+    },
+
 ]
 
 const Content = () => {
@@ -86,6 +90,72 @@ const Content = () => {
                             )
                         })}
                     </div>
+
+                    <div className='productSuggest'>
+                        <div className='fillter'>
+                            <BsFillFilterCircleFill />
+                            Bộ lọc
+                        </div>
+
+                        <div className='fillter'>
+                            Thương hiệu
+                        </div>
+
+                        <div className='fillter'>
+                            Giá bán
+                        </div>
+
+                        <div className='fillter'>
+                            Màn hình
+                        </div>
+
+                        <div className='fillter'>
+                            Camera Trước
+                        </div>
+
+                        <div className='fillter'>
+                            Camera sau
+                        </div>
+
+                        <div className='fillter'>
+                            RAM
+                        </div>
+
+                        <div className='fillter'>
+                            Bộ nhớ trong
+                        </div>
+
+                    </div>
+
+                    <div className='listAllProduct'>
+                        {data && data.map((item, index) => {
+                            return (
+                                <AllProduct key={index} img={item.img} name={item.name} price={item.price} discount={item.discount} chip={item.chip} sizeScreen={item.sizeScreen} ram={item.ram} rom={item.rom} />
+                            )
+                        })}
+                    </div>
+                    <div className='productForYou'>
+                        <h3 className=''>Sản phẩm dành riêng cho bạn</h3>
+                    </div>
+                    <div className='listProductForMe'>
+                        {data && data.map((item, index) => {
+                            return (
+                                <ProductForMe key={index} img={item.img} name={item.name} price={item.price} discount={item.discount} chip={item.chip} sizeScreen={item.sizeScreen} ram={item.ram} rom={item.rom} />
+                            )
+                        })}
+                    </div>
+                </div>
+
+                <div className='footer'>
+                    <p className="titleFotter">
+                        Copyright 1999-2023 công ty cổ phần Thương mại Nguyễn Kim <br></br>
+                    </p>
+                    <p className="descFooter">
+                        Giấy chứng nhận đăng ký kinh doanh số 90909023 , cấp ngày 23/2/2090 bởi Sở kế hoạch và đầu tư TP.HCM
+                    </p>
+                    <p className="addFooter">
+                        Đăng kí trụ sở chính: 64-33 Trần Hưng Đạo, P.Cao Lãnh TP.HCM
+                    </p>
                 </div>
             </div>
             {isShowModal && <Modal setIsShowModalList={setIsShowModalList} listProduct={listProduct} setListProduct={setListProduct} setIsShowModal={setIsShowModal} data={dataDetail} />}
